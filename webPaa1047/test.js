@@ -57,7 +57,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     }, 25000);
     setTimeout(async() => {      
       console.log('esperar4....')
-      return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/honda_fit_rojo.jpeg");
+      return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/honda_fit_rojo.jpg");
     }, 30000);
     setTimeout(async() => {      
       console.log('esperar5....')
@@ -270,16 +270,21 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     setTimeout(async() => {      
       console.log('esperar5....')
       return driver.findElement(By.id("region_1")).sendKeys("s");
-    }, 81000);
+    }, 81000);/*
     setTimeout(async() => {      
       console.log('esperar5....')
       return driver.findElement(By.tagName("body")).click();
-    }, 82000); 
+    }, 82000); */
 
     setTimeout(async() => {      
       console.log('esperar5....')
       return driver.findElement(By.xpath("//button[@type='submit']")).click();
     }, 90000);
+    setTimeout(async() => {      
+      console.log('esperar5....')
+      return driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }, 95000);
+
 
 
 
