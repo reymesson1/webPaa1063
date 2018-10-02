@@ -6,9 +6,9 @@ var app = express();
 var Post = require('./models/post.js');
 var Master = require('./models/master.js');
 
-// var CronJob = require('cron').CronJob;
-// new CronJob('0 */2 * * * *', function() {
-//   console.log('You will see this message every second');
+var CronJob = require('cron').CronJob;
+new CronJob('0 7,12,20,30,40,50 * * * *', function() {
+  console.log('You will see this message every second');
 
   setTimeout(async() => {
 
@@ -221,7 +221,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     }, 61000);
     setTimeout(async() => {      
       console.log('esperar5....')
-      return driver.findElement(By.id("price")).sendKeys(430000);
+      return driver.findElement(By.id("price")).sendKeys(43000);
     }, 62000);
     setTimeout(async() => {      
       console.log('esperar5....')
@@ -293,7 +293,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     driver.close();
 })
 
-// }, null, true, 'America/Los_Angeles');
+}, null, true, 'America/Los_Angeles');
 
 
 mongoose.connect('mongodb://localhost:27017/project2',(err)=>{
