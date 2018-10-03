@@ -17,6 +17,8 @@ app.options('*', cors());
 var User = require('./models/user.js');
 var Field = require('./models/field.js');
 var Master = require('./models/master.js');
+var Keyword = require('./models/keyword.js');
+
   
 app.get('/userdata/:id',  async(req, res) =>{    
   var decode = jwt.decode(req.params.id,'123');
@@ -231,6 +233,42 @@ app.post('/register', function(req,res){
     }
   })
 })
+app.post('/addwordlist', function(req,res){
+
+  var keyword = new Keyword(req.body)
+  
+  keyword.save(function(err){
+  if(!err){
+  console.log('Saved!');
+  }
+  })
+  
+  res.send(req.body);
+  
+  })
+  
+  app.get('/wordlist', async(req,res)=>{
+  var keyword = await Keyword.find({})
+  res.send(keyword)
+  })
+  
+  app.post('/removewordlist', async(req,res)=>{
+
+    const ObjectId = mongoose.Types.ObjectId;
+    
+    var _id = new ObjectId(req.body._id);
+    
+    var keyword = await Keyword.remove({"_id":_id},function(err){
+      if(!err){
+        console.log('Removed!');
+      }
+    })
+  })
+  
+  app.post('/updatewordlist', async(req,res)=>{
+  
+  })
+
 mongoose.connect('mongodb://localhost:27017/project2',(err)=>{
   if(!err){
       console.log('Connected to mongo Database');

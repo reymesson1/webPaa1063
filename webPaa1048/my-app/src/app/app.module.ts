@@ -54,11 +54,12 @@ import { UserInformationComponent } from 'src/admin/user.information.component';
 import { RegisterComponent } from 'src/admin/register.component';
 import { LoginComponent } from 'src/admin/login.component';
 import { MomentModule } from 'angular2-moment';
+import { WordlistComponent, DialogOverviewExampleDialogWord } from 'src/wordlist/wordlist.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit
+    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent
   ],
   imports: [
     MomentModule, BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, MatProgressSpinnerModule,
@@ -66,6 +67,7 @@ import { MomentModule } from 'angular2-moment';
     MatDividerModule, MatCardModule, MatTableModule, MatTooltipModule,  MatRadioModule,MatOptionModule,MatSelectModule, MatSliderModule,  MatInputModule,  
     MatDialogModule, MatMenuModule, MatProgressBarModule,MatSortModule, MatPaginatorModule, MatTabsModule, MatAutocompleteModule, MatDialogModule,MatStepperModule,
     RouterModule.forRoot([
+      { path: "wordlist", component: WordlistComponent },            
       { path: "register", component: RegisterComponent },            
       { path: "login", component: LoginComponent },            
       { path: "master", component: MasterComponent },            
@@ -78,7 +80,7 @@ import { MomentModule } from 'angular2-moment';
   providers: [RestSourceData],
   bootstrap: [AppComponent],
   entryComponents: [
-    DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, DialogOverviewExampleDialogMasterEdit
+    DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord
   ],
   
 })

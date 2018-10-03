@@ -8,6 +8,7 @@ export class RestSourceData{
 
 constructor(private http: HttpClient, private route: Router){}
 
+    words : any = []  
     fields : any = []  
     master : any = []  
     TOKEN_KEY = 'token'
@@ -124,6 +125,25 @@ constructor(private http: HttpClient, private route: Router){}
         this.http.post<any>(this.authPath + '/masterremove', fieldData).subscribe(res =>{ 
            window.location.reload();         
         })  
+    }
+
+    
+    getWord(){
+        this.http.get<any>(this.authPath +'/wordlist').subscribe(res =>{
+            this.words = res;
+        })
+    }
+
+    addWordList(fieldData){
+        this.http.post<any>(this.authPath + '/addwordlist', fieldData).subscribe(res =>{ 
+            window.location.reload();         
+         })
+    }
+
+    removeWord(i){
+        this.http.post<any>(this.authPath + '/removewordlist', {"_id":i}).subscribe(res =>{ 
+            window.location.reload();         
+         })
     }
 
     

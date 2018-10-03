@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Add New Word</h1>
+<div mat-dialog-content>
+  <div class="col-md-3">
+    <p>Name: </p>
+  </div>
+  <div class="col-md-6">
+    <mat-form-field>    
+      <input matInput [(ngModel)]="fieldData.name" name="name">
+    </mat-form-field>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+
+<div mat-dialog-actions>
+  <div class="row">
+    <div class="pull-right">
+      <button mat-button [mat-dialog-close]="fieldData.name" (click)="onClick()" cdkFocusInitial>Ok</button>
+      <button mat-button (click)="onNoClick()">Cancel</button>
+    </div>
+  </div>
