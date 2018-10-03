@@ -7,7 +7,7 @@ var Post = require('./models/post.js');
 var Master = require('./models/master.js');
 
 var CronJob = require('cron').CronJob;
-new CronJob('0 7,12,20,30,40,50 * * * *', function() {
+new CronJob('0 25 * * * *', function() {
   console.log('You will see this message every second');
 
   setTimeout(async() => {

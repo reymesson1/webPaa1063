@@ -8,10 +8,10 @@ var Master = require('./models/master.js');
 var kw = require('./models/keyword.js');
 
 
-var num = 6;
+var num = 12;
 
 var CronJob = require('cron').CronJob;
- new CronJob('0 2,15,25,35,45,55 * * * *', function() {
+ new CronJob('0 15 * * * *', function() {
    console.log('You will see this message every second');
 
   setTimeout(async() => {
@@ -20,7 +20,7 @@ var CronJob = require('cron').CronJob;
 
     var master = Master.findOne({"status":true},function(err,master){
       if(!err){
-        master.title = master.title + " " + kws.name
+        master.title = "Honda Fit 2012 RD$430,000 " + kws.name
         master.save();
       }
     })

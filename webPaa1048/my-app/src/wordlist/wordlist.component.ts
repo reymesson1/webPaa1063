@@ -59,7 +59,7 @@ export class DialogOverviewExampleDialogWord {
     navbarData = {}
     
     constructor(
-        public dialogRef: MatDialogRef,
+        public dialogRef: MatDialogRef<any>,
         public data: RestSourceData,
     ) {}
     
