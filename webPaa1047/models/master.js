@@ -11,5 +11,6 @@ module.exports = mongoose.model('master',{
   title: String,
   fullname: String,
   status: Boolean,
+  order: Number,
   author: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 })

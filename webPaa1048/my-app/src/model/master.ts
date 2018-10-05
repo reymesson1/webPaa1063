@@ -11,5 +11,6 @@ export class Master {
     public status ?: boolean,
     public title ?: string,
     public fullname ?: string,    
+    public order ?: number,    
   ) { }
  }

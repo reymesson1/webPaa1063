@@ -155,6 +155,7 @@ export class DialogOverviewExampleDialogMaster {
     this.fieldData["nameImage"] = [];
     this.fieldData["pathImage"] = [];
     this.fieldData["status"] = false;         
+    this.fieldData["order"] = 0;         
     this.data.addMaster(this.fieldData);    
     for(let x=0,num=1000;x<this.files.length;x++,num+=3000){     
       setTimeout(() => {        

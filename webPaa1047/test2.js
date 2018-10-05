@@ -7,31 +7,49 @@ var Post = require('./models/post.js');
 var Master = require('./models/master.js');
 var kw = require('./models/keyword.js');
 
-
-var num = 12;
-
 var CronJob = require('cron').CronJob;
  new CronJob('0 15 * * * *', function() {
    console.log('You will see this message every second');
 
+   setTimeout(async() => {
+
+      var master = await Master.findOne({"status":true})
+      dataMaster["title"] = master.title
+      dataMaster["description"] = master.description
+      dataMaster["order"] = master.order
+  }, 2000);
+
   setTimeout(async() => {
 
-    var kws = await kw.findOne({"order":num});
+  var kws = await kw.findOne({"order":dataMaster.order});
 
-    var master = Master.findOne({"status":true},function(err,master){
-      if(!err){
-        master.title = "Honda Fit 2012 RD$430,000 " + kws.name
-        master.save();
-      }
-    })
+  var master = Master.findOne({"status":true},function(err,master){
+    if(!err){
+      master.title = master.title + " " + kws.name
+      master.order = master.order + 1
+      master.save();
+    }
+  })
+  }, 6000);
 
-    num++;
-    //console.log(master)      
-    // dataMaster["title"] = master.title
-    // dataMaster["description"] = master.description
+  // setTimeout(async() => {
+
+  //   var kws = await kw.findOne({"order":num});
+
+  //   var master = Master.findOne({"status":true},function(err,master){
+  //     if(!err){
+  //       master.title = "Honda Fit 2012 RD$430,000 " + kws.name
+  //       master.save();
+  //     }
+  //   })
+
+  //   num++;
+  //   //console.log(master)      
+  //   // dataMaster["title"] = master.title
+  //   // dataMaster["description"] = master.description
 
     
-  }, 2000);
+  // }, 2000);
 
 var By = webdriver.By;
 
