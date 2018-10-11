@@ -17,5 +17,28 @@ exports.editschedule = async(req,res)=>{
                 res.send(sch);
             })
         }
-    })     
+    })  
+    
+    var masterData;
+    var fs = require('fs'),
+    path = require('path'),    
+    filePath = path.join(__dirname, '../../../../control/app.js');
+
+    fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
+        if (!err) {
+            masterData=data
+        } else {
+            console.log(err);
+        }
+    });
+
+    var fs = require('fs');
+    fs.writeFile(filePath, masterData, function(err) {
+        if(err) {
+            return console.log(err);
+        }
+
+        console.log("The file was saved!");
+    }); 
+
 }
