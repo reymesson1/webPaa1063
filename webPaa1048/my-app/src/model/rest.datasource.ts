@@ -8,6 +8,7 @@ export class RestSourceData{
 
 constructor(private http: HttpClient, private route: Router){}
 
+    activities : any = []  
     words : any = []  
     fields : any = []  
     master : any = []  
@@ -144,6 +145,12 @@ constructor(private http: HttpClient, private route: Router){}
         this.http.post<any>(this.authPath + '/removewordlist', {"_id":i}).subscribe(res =>{ 
             window.location.reload();         
          })
+    }
+
+    getActivities(){
+        this.http.get<any>(this.authPath +'/activities').subscribe(res =>{
+            this.activities = res;
+        })
     }
 
     

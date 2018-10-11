@@ -18,7 +18,7 @@ var User = require('./models/user.js');
 var Field = require('./models/field.js');
 var Master = require('./models/master.js');
 var Keyword = require('./models/keyword.js');
-
+var activityController = require('./controller/acvitiyController');
   
 app.get('/userdata/:id',  async(req, res) =>{    
   var decode = jwt.decode(req.params.id,'123');
@@ -268,6 +268,8 @@ app.post('/addwordlist', function(req,res){
   app.post('/updatewordlist', async(req,res)=>{
   
   })
+
+  app.get('/activities', activityController.activity)
 
 mongoose.connect('mongodb://localhost:27017/project2',(err)=>{
   if(!err){

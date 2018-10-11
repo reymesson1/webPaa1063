@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, Inject, OnInit, ViewChild} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { RestSourceData } from 'src/model/rest.datasource';
+import {MatSort, MatPaginator, MatTableDataSource} from '@angular/material';
+import {Sort} from '@angular/material';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Master } from "../model/master";
+let global
 
 @Component({
   selector: 'detail',
@@ -7,4 +14,28 @@ import { Component } from '@angular/core';
 })
 export class DetailComponent {
   title = 'my-app';
+
+  constructor(public data:RestSourceData){}
+
+  global
+  displayedColumns: string[] = ['position', 'date','name','actions'];
+  dataSource
+  navbarData = {}    
+  searchfield  
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  ngOnInit(){
+    this.data.getActivities();
+    setTimeout(() => {
+      this.dataSource = this.data.activities;
+    },2000)
+  }
+  
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercasematches
+    this.dataSource.filter = filterValue;
+  }
+
 }
