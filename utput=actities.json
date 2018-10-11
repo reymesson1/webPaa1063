@@ -1,0 +1,8 @@
+{"_id":{"$oid":"5bbf4af4dd0c03ae303ec5fe"},"name":"batchfile\n","lastRun":{"$date":"2018-10-11T13:07:00.045Z"},"error":false,"__v":0}
+{"_id":{"$oid":"5bbf4ba873395da0045bc404"},"name":"batchfile3","lastRun":{"$date":"2018-10-11T13:10:00.047Z"},"error":false,"__v":0}
+{"_id":{"$oid":"5bbf4cd473395da0045bc405"},"name":"batchfile2","lastRun":{"$date":"2018-10-11T13:15:00.057Z"},"error":false,"__v":0}
+{"_id":{"$oid":"5bbf576073395da0045bc406"},"name":"batchfile6","lastRun":{"$date":"2018-10-11T14:00:00.216Z"},"error":false,"__v":0}
+{"_id":{"$oid":"5bbf576073395da0045bc407"},"name":"batchfile6","lastRun":{"$date":"2018-10-11T14:00:00.217Z"},"error":false,"__v":0}
+{"_id":{"$oid":"5bbf576073395da0045bc408"},"name":"batchfile6","lastRun":{"$date":"2018-10-11T14:00:00.220Z"},"error":false,"__v":0}
+{"_id":{"$oid":"5bbf576073395da0045bc409"},"name":"batchfile6","lastRun":{"$date":"2018-10-11T14:00:00.221Z"},"error":false,"__v":0}
+{"_id":{"$oid":"5bbf579c41c6fcb0c43e8443"},"name":"batchfile1","lastRun":{"$date":"2018-10-11T14:01:00.040Z"},"error":false,"__v":0}
