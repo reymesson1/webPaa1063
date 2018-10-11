@@ -6,10 +6,10 @@ var app = express();
 var Post = require('./models/post.js');
 var Master = require('./models/master.js');
 
-var CronJob = require('cron').CronJob;
-new CronJob('0 25 * * * *', function() {
-  console.log('You will see this message every second');
-
+// var CronJob = require('cron').CronJob;
+// new CronJob('0 49 * * * *', function() {
+//   console.log('You will see this message every second');
+  
   setTimeout(async() => {
 
     var master = await Master.findOne({"status":true})
@@ -30,7 +30,7 @@ var dataMaster = {}
 
 driver.get('https://www.corotos.com.do/create');
 
-driver.findElement(By.id('pid_email')).sendKeys('reymesson@gmail.com')
+driver.findElement(By.id('pid_email')).sendKeys('santiagosantosauto@gmail.com')
 driver.findElement(By.className('_2QhqT _3NHOV _3z-oQ _2El2O _7xPBo _2pXQq _3WoTQ gO5qu _2h31L _1Dh7N')).click()
 
 driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-code')),20000)
@@ -270,11 +270,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     setTimeout(async() => {      
       console.log('esperar5....')
       return driver.findElement(By.id("region_1")).sendKeys("s");
-    }, 81000);/*
-    setTimeout(async() => {      
-      console.log('esperar5....')
-      return driver.findElement(By.tagName("body")).click();
-    }, 82000); */
+    }, 81000);
 
     setTimeout(async() => {      
       console.log('esperar5....')
@@ -293,7 +289,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     driver.close();
 })
 
-}, null, true, 'America/Los_Angeles');
+//}, null, true, 'America/Los_Angeles');
 
 
 mongoose.connect('mongodb://localhost:27017/project2',(err)=>{

@@ -7,9 +7,9 @@ var Post = require('./models/post.js');
 var Master = require('./models/master.js');
 var kw = require('./models/keyword.js');
 
-var CronJob = require('cron').CronJob;
- new CronJob('0 15 * * * *', function() {
-   console.log('You will see this message every second');
+// var CronJob = require('cron').CronJob;
+//  new CronJob('0 40 * * * *', function() {
+//    console.log('You will see this message every second');
 
    setTimeout(async() => {
 
@@ -19,18 +19,18 @@ var CronJob = require('cron').CronJob;
       dataMaster["order"] = master.order
   }, 2000);
 
-  setTimeout(async() => {
+   setTimeout(async() => {
 
   var kws = await kw.findOne({"order":dataMaster.order});
 
   var master = Master.findOne({"status":true},function(err,master){
     if(!err){
-      master.title = master.title + " " + kws.name
+      master.title = "Honda Fit 2012 Rojo Con las B " + kws.name
       master.order = master.order + 1
       master.save();
     }
   })
-  }, 6000);
+   }, 6000);
 
   // setTimeout(async() => {
 
@@ -61,7 +61,7 @@ var dataMaster = {}
 
 driver.get('https://www.corotos.com.do/profile');
 
-driver.findElement(By.id('pid_email')).sendKeys('reymesson@gmail.com')
+driver.findElement(By.id('pid_email')).sendKeys('santiagosantosauto@gmail.com')
 driver.findElement(By.className('_2QhqT _3NHOV _3z-oQ _2El2O _7xPBo _2pXQq _3WoTQ gO5qu _2h31L _1Dh7N')).click()
 
 driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-code')),20000)
@@ -243,7 +243,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     driver.close();
 })
 
-}, null, true, 'America/Los_Angeles');
+//}, null, true, 'America/Los_Angeles');
 
 
 mongoose.connect('mongodb://localhost:27017/project2',(err)=>{

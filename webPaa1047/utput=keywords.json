@@ -1,0 +1,25 @@
+{"_id":{"$oid":"5bb2d46a6e03ba5062e04c52"},"name":"En especial","used":false,"order":1.0}
+{"_id":{"$oid":"5bb2d47a6e03ba5062e04c53"},"name":"Oferta","used":false,"order":0.0}
+{"_id":{"$oid":"5bb2d4826e03ba5062e04c54"},"name":"Aproveche","used":false,"order":2.0}
+{"_id":{"$oid":"5bb2d49c6e03ba5062e04c55"},"name":"Aprovecha","used":false,"order":3.0}
+{"_id":{"$oid":"5bb2d4a46e03ba5062e04c56"},"name":"Como nuevo","used":false,"order":4.0}
+{"_id":{"$oid":"5bb2d4ac6e03ba5062e04c57"},"name":"Recien importado","used":true,"order":5.0}
+{"_id":{"$oid":"5bb2d4b36e03ba5062e04c58"},"name":"Moderno","used":false,"order":6.0}
+{"_id":{"$oid":"5bb2d4bc6e03ba5062e04c59"},"name":"Excelente precio","used":false,"order":7.0}
+{"_id":{"$oid":"5bb2d4c66e03ba5062e04c5a"},"name":"En buen estado","used":false,"order":8.0}
+{"_id":{"$oid":"5bb2d4cd6e03ba5062e04c5b"},"name":"Al mejor precio","used":false,"order":9.0}
+{"_id":{"$oid":"5bb33f25be9b0652aafc257f"},"name":"Barato","used":false,"order":10.0}
+{"_id":{"$oid":"5bb33f31be9b0652aafc2580"},"name":"Ven a ver","used":false,"order":11.0}
+{"_id":{"$oid":"5bb33f3dbe9b0652aafc2581"},"name":"Venga y aproveche","used":false,"order":12.0}
+{"_id":{"$oid":"5bb33fc8be9b0652aafc2582"},"name":"Negociable","used":false,"order":13.0}
+{"_id":{"$oid":"5bb34020be9b0652aafc2583"},"name":"Venta","used":false,"order":15.0}
+{"_id":{"$oid":"5bb34031be9b0652aafc2584"},"name":"Se vende","used":false,"order":14.0}
+{"_id":{"$oid":"5bb34174be9b0652aafc2585"},"name":"Solo por hoy","used":false,"order":16.0}
+{"_id":{"$oid":"5bb42519895c622da40c44ea"},"name":"Por fin","order":18.0,"used":false,"__v":0}
+{"_id":{"$oid":"5bb42524895c622da40c44eb"},"name":"Atencion","order":20.0,"used":false,"__v":0}
+{"_id":{"$oid":"5bb42540895c622da40c44ec"},"name":"Financimiento Disponible","order":19.0,"used":false,"__v":0}
+{"_id":{"$oid":"5bb4254b895c622da40c44ed"},"name":"Disponible Ya","order":21.0,"used":false,"__v":0}
+{"_id":{"$oid":"5bb4255f895c622da40c44ee"},"name":"Si tu lo vieras","order":22.0,"used":false,"__v":0}
+{"_id":{"$oid":"5bb42574895c622da40c44ef"},"name":"Venga por el","order":23.0,"used":false,"__v":0}
+{"_id":{"$oid":"5bb4258b895c622da40c44f0"},"name":"Ya es tuyo","order":24.0,"used":false,"__v":0}
+{"_id":{"$oid":"5bb4a20c895c622da40c44f1"},"name":"Llame ya","order":17.0,"used":false,"__v":0}
