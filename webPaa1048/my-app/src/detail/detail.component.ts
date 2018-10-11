@@ -18,7 +18,7 @@ export class DetailComponent {
   constructor(public data:RestSourceData){}
 
   global
-  displayedColumns: string[] = ['position', 'date','name','actions'];
+  displayedColumns: string[] = ['position', 'date','name','error', 'actions'];
   dataSource
   navbarData = {}    
   searchfield  
@@ -28,7 +28,9 @@ export class DetailComponent {
   ngOnInit(){
     this.data.getActivities();
     setTimeout(() => {
-      this.dataSource = this.data.activities;
+      this.dataSource = new MatTableDataSource<any>(this.data.activities);      
+      this.dataSource.sort = this.sort;  
+      this.dataSource.paginator = this.paginator;
     },2000)
   }
   
