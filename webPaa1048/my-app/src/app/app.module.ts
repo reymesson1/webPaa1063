@@ -55,11 +55,12 @@ import { RegisterComponent } from 'src/admin/register.component';
 import { LoginComponent } from 'src/admin/login.component';
 import { MomentModule } from 'angular2-moment';
 import { WordlistComponent, DialogOverviewExampleDialogWord } from 'src/wordlist/wordlist.component';
+import { ScheduleComponent, DialogOverviewExampleDialogScheduleEdit } from 'src/schedule/schedule.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent
+    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent, ScheduleComponent, DialogOverviewExampleDialogScheduleEdit
   ],
   imports: [
     MomentModule, BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, MatProgressSpinnerModule,
@@ -74,13 +75,14 @@ import { WordlistComponent, DialogOverviewExampleDialogWord } from 'src/wordlist
       { path: "detail", component: DetailComponent },            
       { path: "field", component: FieldComponent },            
       { path: "account", component: AccountComponent },            
+      { path: "schedule", component: ScheduleComponent },            
       { path: "**", redirectTo: '/master' }  
     ]), 
   ],
   providers: [RestSourceData],
   bootstrap: [AppComponent],
   entryComponents: [
-    DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord
+    DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, DialogOverviewExampleDialogScheduleEdit
   ],
   
 })

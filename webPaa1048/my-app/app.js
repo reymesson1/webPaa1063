@@ -19,6 +19,8 @@ var Field = require('./models/field.js');
 var Master = require('./models/master.js');
 var Keyword = require('./models/keyword.js');
 var activityController = require('./controller/acvitiyController');
+var scheduleController = require('./controller/scheduleController');
+
   
 app.get('/userdata/:id',  async(req, res) =>{    
   var decode = jwt.decode(req.params.id,'123');
@@ -270,6 +272,8 @@ app.post('/addwordlist', function(req,res){
   })
 
   app.get('/activities', activityController.activity)
+  app.get('/schedules', scheduleController.schedule)
+  app.post('/editschedules', scheduleController.editschedule)
 
 mongoose.connect('mongodb://localhost:27017/project2',(err)=>{
   if(!err){

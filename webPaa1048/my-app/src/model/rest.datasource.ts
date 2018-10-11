@@ -8,6 +8,7 @@ export class RestSourceData{
 
 constructor(private http: HttpClient, private route: Router){}
 
+    schedules : any = []  
     activities : any = []  
     words : any = []  
     fields : any = []  
@@ -150,6 +151,18 @@ constructor(private http: HttpClient, private route: Router){}
     getActivities(){
         this.http.get<any>(this.authPath +'/activities').subscribe(res =>{
             this.activities = res;
+        })
+    }
+
+    getSchedules(){
+        this.http.get<any>(this.authPath +'/schedules').subscribe(res =>{
+            this.schedules = res;
+        })
+    }
+
+    setSchedules(data){
+        this.http.post<any>(this.authPath + '/editschedules', data).subscribe(res =>{ 
+
         })
     }
 
