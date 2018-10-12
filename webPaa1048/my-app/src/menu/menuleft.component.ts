@@ -10,8 +10,8 @@ export class MenuLeftComponent {
 
   constructor(public data: RestSourceData){}
   
-    navbarData = {}  
-    userData = {}
+    navbarData : any = {}  
+    userData : any = {}
     
     ngOnInit(){    
       this.data.getFields();

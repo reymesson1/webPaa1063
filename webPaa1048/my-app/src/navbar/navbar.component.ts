@@ -10,8 +10,8 @@ export class NavbarMainComponent {
   
   constructor(public data: RestSourceData){}
 
-  navbarData = {}  
-  userData = {}
+  navbarData : any = {}  
+  userData : any = {}
 
   ngOnInit(){ 
     this.data.getUsers();

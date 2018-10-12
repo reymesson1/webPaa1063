@@ -15,7 +15,7 @@ export class MasterComponent {
   global
   displayedColumns: string[] = ['position', 'date','title','name', 'weight', 'symbol', 'field', 'actions'];
   dataSource
-  navbarData = {}    
+  navbarData : any = {}    
   searchfield  
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -104,8 +104,8 @@ export class MasterComponent {
 export class DialogOverviewExampleDialogMaster {
   nextDay : Date;
   fieldData : Master = {}
-  navbarData = {}    
-  isLinear = false;
+  navbarData : any = {}    
+  isLinear : boolean = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   isUploaded : boolean = false;
@@ -193,14 +193,17 @@ export class DialogOverviewExampleDialogMaster {
   styleUrls: ['addfield.component.scss'],
 })
 export class DialogOverviewExampleDialogMasterEdit {
-  fieldData = {
+  isLinear : boolean = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  fieldData : any = {
     fullname: "",
     description: "",
     value:"",
     category:"English",
     field: ""
   } 
-  navbarData = {}    
+  navbarData : any = {}    
     
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialogMasterEdit>,
@@ -223,5 +226,7 @@ export class DialogOverviewExampleDialogMasterEdit {
   onClick(){     
     this.data.setMasterEdit(this.fieldData);     
   }
+
+  onSelectFile(str){}
 
 }

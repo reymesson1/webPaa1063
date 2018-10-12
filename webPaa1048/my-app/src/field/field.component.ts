@@ -13,7 +13,7 @@ export class FieldComponent {
   title = 'my-app';
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'field', 'actions'];
   dataSource
-  navbarData = {}    
+  navbarData : any = {}    
   searchfield
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -69,13 +69,13 @@ export class FieldComponent {
 })
 export class DialogOverviewExampleDialog {
 
-  fieldData = {
+  fieldData : any = {
     description:"",
     value:"",
     category:"English",
     field: ""
   }
-  navbarData = {}    
+  navbarData : any = {}    
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
     public data: RestSourceData
@@ -117,13 +117,13 @@ export class DialogOverviewExampleDialog {
 })
 export class DialogOverviewExampleDialogEdit {
 
-  fieldData = {
+  fieldData : any = {
     description: "",
     value:"",
     category:"English",
     field: ""
   }
-  navbarData = {}    
+  navbarData : any = {}    
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialogEdit>,
     public data: RestSourceData

@@ -8,7 +8,7 @@ import { RestSourceData } from 'src/model/rest.datasource';
 })
 export class UserInformationComponent {
 
-  userData = {}
+  userData : any = {}
 
   constructor(public data: RestSourceData){}
 

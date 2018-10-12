@@ -11,10 +11,10 @@ styleUrls: ['./wordlist.component.scss']
 })
 export class WordlistComponent {
 
-fieldData = {}
+fieldData : any = {}
 displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'actions'];
 dataSource
-navbarData = {}
+navbarData : any = {}
 searchfield
 @ViewChild(MatPaginator) paginator: MatPaginator;
 @ViewChild(MatSort) sort: MatSort;
@@ -47,6 +47,7 @@ console.log(i);
 Delete(i){
 this.data.removeWord(i);
 }
+onNoClick(){}
 }
 
 @Component({
@@ -55,8 +56,8 @@ this.data.removeWord(i);
     styleUrls: ['addwordlist.component.scss'],
 })
 export class DialogOverviewExampleDialogWord {
-    fieldData = {}
-    navbarData = {}
+    fieldData : any = {}
+    navbarData : any = {}
     
     constructor(
         public dialogRef: MatDialogRef<any>,
@@ -69,4 +70,5 @@ export class DialogOverviewExampleDialogWord {
         this.fieldData["used"] = false;    
         this.data.addWordList(this.fieldData);
     }   
+    onNoClick(){}
 }

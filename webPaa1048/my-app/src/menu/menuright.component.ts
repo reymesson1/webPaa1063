@@ -9,8 +9,8 @@ import { RestSourceData } from 'src/model/rest.datasource';
 export class MenuRightComponent {
   constructor(public data: RestSourceData){}
   
-    navbarData = {}  
-    userData = {}
+    navbarData : any = {}  
+    userData : any = {}
       
     ngOnInit(){    
     this.data.getFields();

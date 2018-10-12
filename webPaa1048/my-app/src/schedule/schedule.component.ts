@@ -17,7 +17,7 @@ export class ScheduleComponent {
   global
   displayedColumns: string[] = ['position', 'date','name','actions'];
   dataSource
-  navbarData = {}    
+  navbarData : any = {}    
   searchfield  
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -54,6 +54,8 @@ export class ScheduleComponent {
       
   }
 
+  onNoClick(){}
+
 }
 
 @Component({
@@ -62,8 +64,8 @@ export class ScheduleComponent {
     styleUrls: ['addschedule.component.scss'],
   })
   export class DialogOverviewExampleDialogScheduleEdit {
-    fieldData = {} 
-    navbarData = {}    
+    fieldData : any = {} 
+    navbarData : any = {}    
       
     constructor(
       public dialogRef: MatDialogRef<DialogOverviewExampleDialogScheduleEdit>,
@@ -82,5 +84,7 @@ export class ScheduleComponent {
     onClick(){     
       this.data.setSchedules(this.fieldData);
     }
+
+    onNoClick(){}
   
   }
