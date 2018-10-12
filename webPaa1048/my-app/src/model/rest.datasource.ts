@@ -162,7 +162,13 @@ constructor(private http: HttpClient, private route: Router){}
 
     setSchedules(data){
         this.http.post<any>(this.authPath + '/editschedules', data).subscribe(res =>{ 
+            window.location.reload()
+        })
+    }
 
+    resetAll(){
+        this.http.get<any>(this.authPath +'/resetschedules').subscribe(res =>{
+            this.schedules = res;
         })
     }
 

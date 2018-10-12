@@ -54,6 +54,11 @@ export class ScheduleComponent {
       
   }
 
+  resetAll(){
+    this.data.resetAll();
+    console.log('reset all');
+  }
+
   onNoClick(){}
 
 }

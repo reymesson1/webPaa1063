@@ -51,3 +51,9 @@ exports.editschedule = async(req,res)=>{
 
 
 }
+
+exports.resetschedule = async(req,res)=>{
+    console.log('reset')
+    var schedule = await Schedule.updateMany({},{"$set":{"start":0}},{multi:true})
+    res.send("updated!")  
+}

@@ -8,7 +8,15 @@
       </button>
     </form>
 </mat-card>
+<br/>
+<mat-card>
+  <button mat-raised-button	 color="primary" class="pull-right" (click)="resetAll()">
+    Reset All
+  </button>
 
+  <br/>
+</mat-card>
+<br/>
 <mat-card>
 
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
