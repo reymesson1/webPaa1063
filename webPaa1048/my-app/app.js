@@ -274,6 +274,8 @@ app.post('/addwordlist', function(req,res){
   app.get('/schedules', scheduleController.schedule)
   app.post('/editschedules', scheduleController.editschedule)
   app.get('/resetschedules', scheduleController.resetschedule)
+  app.get('/resetscheduleswithvalue', scheduleController.resetschedulewithvalue)
+  app.post('/resetnowschedules', scheduleController.resetnowschedule)
 
 
 mongoose.connect('mongodb://localhost:27017/project2',(err)=>{

@@ -25,7 +25,7 @@ var kw = require('./models/keyword.js');
 
   var master = Master.findOne({"status":true},function(err,master){
     if(!err){
-      master.title = "Honda Fit 2012 Rojo Con las B " + kws.name
+      master.title = "Toyota Paso 2012 Blanco Esplandido automovil RD$365,000 Precios sin igual " + kws.name
       master.order = master.order + 1
       master.save();
     }

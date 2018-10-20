@@ -172,5 +172,17 @@ constructor(private http: HttpClient, private route: Router){}
         })
     }
 
+    resetAllWithValue(){
+        this.http.get<any>(this.authPath +'/resetscheduleswithvalue').subscribe(res =>{
+            this.schedules = res;
+        })
+    }
+
+    resetNowAll(data){
+        this.http.post<any>(this.authPath + '/resetnowschedules', data).subscribe(res =>{ 
+            window.location.reload()
+        })
+    }
+
     
 }

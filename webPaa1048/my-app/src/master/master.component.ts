@@ -221,6 +221,7 @@ export class DialogOverviewExampleDialogMasterEdit {
     this.fieldData["value"] = filtered.value
     this.fieldData["category"] = filtered.category
     this.fieldData["field"] = filtered.field
+    this.fieldData["order"] = filtered.order
   }
 
   onClick(){     

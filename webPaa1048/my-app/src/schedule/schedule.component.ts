@@ -59,6 +59,34 @@ export class ScheduleComponent {
     console.log('reset all');
   }
 
+  resetAllWithValue(){
+    this.data.resetAllWithValue();
+    console.log('reset all');
+  }
+
+  toggle(i){
+    let newindex;
+    let temp = this.data.schedules.filter((master,index)=>{
+        if(master._id==i){
+          newindex=index
+        }
+    })
+    this.data.schedules[newindex].status = !this.data.schedules[newindex].status    
+  }
+
+  Play(i){
+    let newindex;
+    let temp = this.data.schedules.filter((master,index)=>{
+        if(master._id==i){
+          newindex=index
+        }
+    })    
+    this.data.resetNowAll({"name":this.data.schedules[newindex].name})
+    window.location.reload();
+  }
+
+  Pause(){}
+
   onNoClick(){}
 
 }

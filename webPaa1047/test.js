@@ -17,6 +17,10 @@ var Master = require('./models/master.js');
     dataMaster["title"] = master.title
     dataMaster["description"] = master.description
 
+    var posts = Post.remove({},function(err){
+      if(!err){console.log('removed!')}
+    })
+
     
   }, 2000);
 
@@ -55,6 +59,10 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
 
       return driver.get('https://www.corotos.com.do/create')      
     }, 25000);
+    setTimeout(async() => {      
+      console.log('esperar5....')
+      return driver.findElement(By.id("_tealiumModalClose")).click();
+    }, 27000);
     setTimeout(async() => {      
       console.log('esperar4....')
       return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/honda_fit_rojo.jpg");
@@ -220,8 +228,8 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
       return driver.findElement(By.xpath("//button[@type='submit']")).click();
     }, 61000);
     setTimeout(async() => {      
-      console.log('esperar5....')
-      return driver.findElement(By.id("price")).sendKeys(43000);
+      console.log('successfully....')
+      return driver.findElement(By.id("price")).sendKeys(36500);
     }, 62000);
     setTimeout(async() => {      
       console.log('esperar5....')
