@@ -15,5 +15,7 @@ export class Master {
     public quantity ?: string,    
     public isLinear ?: string,    
     public order ?: number,    
+    public header ?: string,    
+    public sequence ?: number,    
   ) { }
  }

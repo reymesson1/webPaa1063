@@ -38,13 +38,13 @@ app.get('/master', async (req, res)=>{
 })
 
 app.post('/master', async (req, res)=>{  
-  var masterData = req.body     
+  var masterData = req.body   
   var decode = jwt.decode(req.body.token,'123')
   masterData.author = decode.sub  
   var master = new Master(masterData)  
   master.save((err, result)=>{
     if(!err){
-      console.log('Saved!')
+      console.log('Saved!', result)
       res.send(result)
     }    
   })
@@ -94,6 +94,7 @@ app.post('/masteredit', async (req, res)=>{
     master.title = req.body.title
     master.description = req.body.description
     master.category = req.body.category
+    master.order = req.body.order
     master.save()    
   })  
   

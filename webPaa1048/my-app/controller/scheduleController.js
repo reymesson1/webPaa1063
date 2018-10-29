@@ -142,6 +142,23 @@ exports.resetschedulewithvalue = async(req,res)=>{
         }
     })
 
+    var schedule11 = await Schedule.findOne({"name":"bachfile10"},function(err,schedule){
+        if(!err){
+            schedule.start = "59";
+            schedule.save(function(err,schedule){
+                console.log('updated schedule',schedule)
+            })
+        }
+    })
+    var schedule12 = await Schedule.findOne({"name":"bachfile11"},function(err,schedule){
+        if(!err){
+            schedule.start = "55";
+            schedule.save(function(err,schedule){
+                console.log('updated schedule',schedule)
+            })
+        }
+    })
+
     res.send("updated!")  
 }
 

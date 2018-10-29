@@ -32,22 +32,11 @@
         <mat-form-field class="example-full-width">
             <textarea matInput placeholder="Order" [(ngModel)]="fieldData.order" name="order"></textarea>
         </mat-form-field>
-        <mat-form-field class="example-full-width" value="Category">        
-            <mat-select [(ngModel)]="fieldData.category" name="category">
-              <mat-option value="Inmuebles en venta">Inmuebles en venta</mat-option>          
-              <mat-option value="Vehiculo">Vehiculo</mat-option>          
-              <mat-option value="Electronica">Electronica</mat-option>          
-            </mat-select>
-        </mat-form-field>        
-        <mat-form-field class="example-full-width" value="Category">        
-            <mat-select [(ngModel)]="fieldData.category2" name="category2">
-              <mat-option *ngIf="fieldData.category=='Inmuebles en venta'" value="Apartamentos">Apartamentos</mat-option>          
-              <mat-option *ngIf="fieldData.category=='Inmuebles en venta'" value="Casa">Casa</mat-option>          
-              <mat-option *ngIf="fieldData.category=='Vehiculo'" value="Carro">Carro</mat-option>          
-              <mat-option *ngIf="fieldData.category=='Vehiculo'" value="Jeepeta">Jeepeta</mat-option>          
-              <mat-option *ngIf="fieldData.category=='Electronica'" value="Celulares y Tabletas">Celulares y Tabletas</mat-option>          
-              <mat-option *ngIf="fieldData.category=='Electronica'" value="Computadoras y Laptop">Computadoras y Laptop</mat-option>          
-            </mat-select>
+        <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Sequence" [(ngModel)]="fieldData.sequence" name="sequence"></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Header" [(ngModel)]="fieldData.header" name="header"></textarea>
         </mat-form-field>        
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -56,6 +45,23 @@
     
   </mat-step>
   <mat-step>
+        <mat-form-field class="example-full-width" value="Category">        
+                <mat-select [(ngModel)]="fieldData.category" name="category">
+                  <mat-option value="Inmuebles en venta">Inmuebles en venta</mat-option>          
+                  <mat-option value="Vehiculo">Vehiculo</mat-option>          
+                  <mat-option value="Electronica">Electronica</mat-option>          
+                </mat-select>
+            </mat-form-field>        
+            <mat-form-field class="example-full-width" value="Category">        
+                <mat-select [(ngModel)]="fieldData.category2" name="category2">
+                  <mat-option *ngIf="fieldData.category=='Inmuebles en venta'" value="Apartamentos">Apartamentos</mat-option>          
+                  <mat-option *ngIf="fieldData.category=='Inmuebles en venta'" value="Casa">Casa</mat-option>          
+                  <mat-option *ngIf="fieldData.category=='Vehiculo'" value="Carro">Carro</mat-option>          
+                  <mat-option *ngIf="fieldData.category=='Vehiculo'" value="Jeepeta">Jeepeta</mat-option>          
+                  <mat-option *ngIf="fieldData.category=='Electronica'" value="Celulares y Tabletas">Celulares y Tabletas</mat-option>          
+                  <mat-option *ngIf="fieldData.category=='Electronica'" value="Computadoras y Laptop">Computadoras y Laptop</mat-option>          
+                </mat-select>
+            </mat-form-field>
       <ng-template matStepLabel>Done</ng-template>
       <mat-form-field class="example-full-width">
           <textarea matInput placeholder="Quantity" [(ngModel)]="fieldData.quantity" name="quantity" ></textarea>

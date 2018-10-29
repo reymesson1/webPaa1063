@@ -9,6 +9,7 @@ module.exports = mongoose.model('master',{
   pathImage: Array,  
   place: String,
   title: String,
+  header: String,
   fullname: String,
   status: Boolean,
   order: Number,

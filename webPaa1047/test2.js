@@ -13,7 +13,7 @@ var kw = require('./models/keyword.js');
 
    setTimeout(async() => {
 
-      var master = await Master.findOne({"status":true})
+      var master = await Master.findOne({"sequence":0})
       dataMaster["title"] = master.title
       dataMaster["description"] = master.description
       dataMaster["order"] = master.order
@@ -23,9 +23,27 @@ var kw = require('./models/keyword.js');
 
   var kws = await kw.findOne({"order":dataMaster.order});
 
-  var master = Master.findOne({"status":true},function(err,master){
+  var master = Master.findOne({"sequence":0},function(err,master){
     if(!err){
-      master.title = "Toyota Paso 2012 Blanco Esplandido automovil RD$365,000 Precios sin igual " + kws.name
+     
+      master.header = master.title + " " + new Date().getTime()
+      //master.header = master.title + kws.name
+      master.order = master.order + 1
+      master.save();
+    }
+  })
+
+  var master = Master.findOne({"sequence":1},function(err,master){
+    if(!err){
+      master.header = master.title + " " + new Date().getTime()
+      master.order = master.order + 1
+      master.save();
+    }
+  })
+
+  var master = Master.findOne({"sequence":2},function(err,master){
+    if(!err){
+      master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
@@ -95,7 +113,35 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
       console.log('esperar4....') 
       return driver.findElement(By.className('cOriw _1jhdI btn-default')).click()
       //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 40000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.findElement(By.xpath("//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 50000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.navigate().refresh();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
     }, 60000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('_3X0nW _11nXj l-BkY')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 70000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('cOriw _1jhdI btn-default')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 80000);
     setTimeout(async() => {      
       console.log('esperar4....') 
       //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
@@ -105,6 +151,62 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
       //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
       //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
     }, 90000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.navigate().refresh();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 100000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('_3X0nW _11nXj l-BkY')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 150000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('cOriw _1jhdI btn-default')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 160000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.findElement(By.xpath("//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 170000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.navigate().refresh();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 200000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('_3X0nW _11nXj l-BkY')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 210000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('cOriw _1jhdI btn-default')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 220000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.findElement(By.xpath("//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 230000);
     // setTimeout(async() => {      
     //   console.log('esperar5....')
     //   return driver.findElement(By.id("title")).sendKeys(dataMaster.title);

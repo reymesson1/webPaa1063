@@ -15,7 +15,7 @@ let global
 export class ScheduleComponent {
 
   global
-  displayedColumns: string[] = ['position', 'date','name','actions'];
+  displayedColumns: string[] = ['position', 'date','name','alias','actions'];
   dataSource
   navbarData : any = {}    
   searchfield  
