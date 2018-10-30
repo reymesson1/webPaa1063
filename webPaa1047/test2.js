@@ -26,7 +26,7 @@ var kw = require('./models/keyword.js');
   var master = Master.findOne({"sequence":0},function(err,master){
     if(!err){
      
-      master.header = master.title + " " + new Date().getTime()
+      master.header = master.title + " A" + new Date().getTime()
       //master.header = master.title + kws.name
       master.order = master.order + 1
       master.save();
@@ -35,7 +35,7 @@ var kw = require('./models/keyword.js');
 
   var master = Master.findOne({"sequence":1},function(err,master){
     if(!err){
-      master.header = master.title + " " + new Date().getTime()
+      master.header = master.title + " B" + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
@@ -43,7 +43,7 @@ var kw = require('./models/keyword.js');
 
   var master = Master.findOne({"sequence":2},function(err,master){
     if(!err){
-      master.header = master.title + " " + new Date().getTime()
+      master.header = master.title + " C" + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
