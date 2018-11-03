@@ -39,6 +39,13 @@ export class ScheduleComponent {
     this.dataSource.filter = filterValue;
   }
 
+  Delete(i){
+    let data = this.data.schedules.filter((master)=>{
+      return master._id.indexOf(i) !== -1
+    })    
+    this.data.removeSchedules(data);
+  }
+
   Edit(i){
 
     global=i
@@ -46,6 +53,17 @@ export class ScheduleComponent {
       return master._id.indexOf(i) !== -1
     })  
     const dialogRef = this.dialog.open(DialogOverviewExampleDialogScheduleEdit, {
+      width: '550px'      
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      
+    });
+      
+  }
+
+  Add(){
+
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialogScheduleAdd, {
       width: '550px'      
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -63,6 +81,7 @@ export class ScheduleComponent {
     this.data.resetAllWithValue();
     console.log('reset all');
   }
+
 
   toggle(i){
     let newindex;
@@ -96,6 +115,28 @@ export class ScheduleComponent {
     templateUrl: 'addschedule.component.html',
     styleUrls: ['addschedule.component.scss'],
   })
+  export class DialogOverviewExampleDialogScheduleAdd {
+    fieldData : any = {} 
+    navbarData : any = {}    
+      
+    constructor(
+      public dialogRef: MatDialogRef<DialogOverviewExampleDialogScheduleAdd>,
+      public data: RestSourceData,
+      private _formBuilder: FormBuilder
+    ) {} 
+  
+    onClick(){     
+      this.data.addSchedules(this.fieldData);
+    }
+
+    onNoClick(){}
+  
+  }
+@Component({
+    selector: 'dialog-overview-example-dialog',
+    templateUrl: 'addschedule.component.html',
+    styleUrls: ['addschedule.component.scss'],
+  })
   export class DialogOverviewExampleDialogScheduleEdit {
     fieldData : any = {} 
     navbarData : any = {}    
@@ -112,6 +153,7 @@ export class ScheduleComponent {
           this.fieldData["_id"] = filtered._id
           this.fieldData["name"] = filtered.name
           this.fieldData["start"] = filtered.start 
+          this.fieldData["alias"] = filtered.alias 
     }
   
     onClick(){     

@@ -5,6 +5,8 @@ import {MatSort, MatPaginator, MatTableDataSource} from '@angular/material';
 import {Sort} from '@angular/material';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Master } from "../model/master";
+import { Router } from '@angular/router';
+import { generate } from 'rxjs/internal/observable/generate';
 let global
 @Component({
   selector: 'master',
@@ -19,7 +21,7 @@ export class MasterComponent {
   searchfield  
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  constructor(public dialog: MatDialog, public data: RestSourceData) {}
+  constructor(public dialog: MatDialog, public data: RestSourceData, public route : Router) {}
   Edit(i){  
     global=i
     let data = this.data.master.filter((master)=>{
@@ -36,14 +38,16 @@ export class MasterComponent {
     let masterData = {"_id":i}
     this.data.setMasterRemove(masterData);    
   }
-  toggle(i){
+  View(i){
     let newindex;
     let temp = this.data.master.filter((master,index)=>{
         if(master._id==i){
           newindex=index
         }
     })
-    this.data.master[newindex].status = !this.data.master[newindex].status    
+    
+    this.route.navigateByUrl('/masterview/'+i);
+    // this.data.master[newindex].status = !this.data.master[newindex].status    
   }
   Play(i){
     let newindex;
@@ -155,8 +159,338 @@ export class DialogOverviewExampleDialogMaster {
     this.fieldData["nameImage"] = [];
     this.fieldData["pathImage"] = [];
     this.fieldData["status"] = false;         
-    this.fieldData["order"] = 0;         
-    this.data.addMaster(this.fieldData);    
+    this.fieldData["order"] = 0;   
+    var generated = ""    
+    var from = this.fieldData.from;
+    console.log(this.fieldData.category)
+    console.log(this.fieldData.category2)
+    if(this.fieldData.category=="Vehiculo"&&this.fieldData.category2=="Carro"){
+    
+        var complement = [
+          '      return driver.get("https://www.corotos.com.do/create")',
+          '      return driver.findElement(By.id("_tealiumModalClose")).click();',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/honda_fit_rojo.jpg");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
+          '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
+          '      return driver.findElement(By.id("category_0")).click();',
+          '      return driver.findElement(By.id("category_0")).sendKeys("v");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("category_1")).click();',
+          '      return driver.findElement(By.id("category_1")).sendKeys("c");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("metadata.vehicleType")).click();',
+          '      return driver.findElement(By.id("metadata.vehicleType")).sendKeys("s");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.year")).sendKeys("2012");',
+          '      return driver.findElement(By.id("metadata.mileage")).sendKeys("1000");',
+          '      return driver.findElement(By.id("metadata.fuel")).click();',
+          '      return driver.findElement(By.id("metadata.fuel")).sendKeys("g");',
+          '      return driver.findElement(By.id("metadata.fuel")).sendKeys("g");',
+          '      return driver.findElement(By.id("metadata.horsePower")).sendKeys("4");',
+          '      return driver.findElement(By.id("metadata.transmission")).click();',
+          '      return driver.findElement(By.id("metadata.transmission")).sendKeys("a");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.outsideColor")).click();',
+          '      return driver.findElement(By.id("metadata.outsideColor")).sendKeys("r");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.condition")).click();',
+          '      return driver.findElement(By.id("metadata.condition")).sendKeys("u");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.insideColor")).click();',
+          '      return driver.findElement(By.id("metadata.insideColor")).sendKeys("n");',
+          '      return driver.findElement(By.id("metadata.insideColor")).sendKeys("n");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.make")).click();',
+          '      return driver.findElement(By.id("metadata.make")).sendKeys("t");',
+          '      return driver.findElement(By.id("metadata.make")).sendKeys("t");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.model")).click();',
+          '      return driver.findElement(By.id("metadata.model")).sendKeys("p");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("price")).sendKeys('+this.fieldData.price+');',
+          '      return driver.findElement(By.id("region_0")).click();',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("region_1")).click();',
+          '      return driver.findElement(By.id("region_1")).sendKeys("s");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          
+        ]                
+        var generated = ""    
+        var num = 0  
+        for(var i=parseInt(from),j=0;j<4;i+=4000,j++){
+          generated += " setTimeout(async()=>{ \n\n\n\n\n \t " + complement[j] + " \n\n  }, " + i + ")\n";
+          num=i
+        }
+        for(var i=num+4000,j=4;j<complement.length;i+=1000,j++){
+          generated += " setTimeout(async()=>{ \n\n\n\n\n \t " + complement[j] + " \n\n  }, " + i + ")\n";
+        }
+        this.fieldData["generated"] = generated;         
+      
+      
+        
+      this.data.addMaster(this.fieldData);    
+    
+         
+    }else if(this.fieldData.category=="Vehiculo"&&this.fieldData.category2=="Jeepeta"){
+      
+        var complement = [
+          '      return driver.get("https://www.corotos.com.do/create")',
+          '      return driver.findElement(By.id("_tealiumModalClose")).click();',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/honda_fit_rojo_3-7.jpeg");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("title")).sendKeys(dataMaster8.header);',
+          '      return driver.findElement(By.id("description")).sendKeys(dataMaster8.description);',
+          '      return driver.findElement(By.id("category_0")).click();',
+          '      return driver.findElement(By.id("category_0")).sendKeys("v");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("category_1")).click();',
+          '      return driver.findElement(By.id("category_1")).sendKeys("j");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("metadata.year")).sendKeys("2013");',
+          '      return driver.findElement(By.id("metadata.mileage")).sendKeys("1000");',
+          '      return driver.findElement(By.id("metadata.fuel")).click();',
+          '      return driver.findElement(By.id("metadata.fuel")).sendKeys("g");',
+          '      return driver.findElement(By.id("metadata.fuel")).sendKeys("g");',
+          '      return driver.findElement(By.id("metadata.transmission")).click();',
+          '      return driver.findElement(By.id("metadata.transmission")).sendKeys("a");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.outsideColor")).click();',
+          '      return driver.findElement(By.id("metadata.outsideColor")).sendKeys("r");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.insideColor")).click();',
+          '      return driver.findElement(By.id("metadata.insideColor")).sendKeys("n");',
+          '      return driver.findElement(By.id("metadata.insideColor")).sendKeys("n");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.horsePower")).sendKeys("4");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.condition")).click();',
+          '      return driver.findElement(By.id("metadata.condition")).sendKeys("u");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.make")).click();',
+          '      return driver.findElement(By.id("metadata.make")).sendKeys("h");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.model")).click();',
+          '      return driver.findElement(By.id("metadata.model")).sendKeys("f");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("metadata.heavyVehicleType")).click();',
+          '      return driver.findElement(By.id("metadata.heavyVehicleType")).sendKeys("j");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("price")).sendKeys('+this.fieldData.price+');',
+          '      return driver.findElement(By.id("region_0")).click();',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("region_1")).click();',
+          '      return driver.findElement(By.id("region_1")).sendKeys("s");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          
+        ]        
+        var generated = ""    
+        var num = 0  
+        for(var i=parseInt(from),j=0;j<4;i+=4000,j++){
+          generated += " setTimeout(async()=>{ \n\n\n\n\n \t " + complement[j] + " \n\n  }, " + i + ")\n";
+          num=i
+        }
+        for(var i=num+4000,j=4;j<complement.length;i+=1000,j++){
+          generated += " setTimeout(async()=>{ \n\n\n\n\n \t " + complement[j] + " \n\n  }, " + i + ")\n";
+        }
+        this.fieldData["generated"] = generated;        
+
+        this.data.addMaster(this.fieldData);    
+
+
+    }else if(this.fieldData.category=="Inmuebles en venta"&&this.fieldData.category2=="Apartamentos"){
+
+      
+        var complement = [
+          '      return driver.get("https://www.corotos.com.do/create")      ',
+          '      return driver.findElement(By.id("_tealiumModalClose")).click();',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("c:/Users/PUBLICADOR_COROTOS1/Desktop/proyecto.jpg");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
+          '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
+          '      return driver.findElement(By.id("category_0")).click();',
+          '      return driver.findElement(By.id("category_0")).sendKeys("i");',
+          '      return driver.findElement(By.id("category_0")).sendKeys("i");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("category_1")).click();',
+          '      return driver.findElement(By.id("category_1")).sendKeys("a");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("metadata.rooms")).sendKeys("3");',
+          '      return driver.findElement(By.id("metadata.bathrooms")).sendKeys("2");',
+          '      return driver.findElement(By.id("metadata.constructionArea")).sendKeys("110");',
+          '      return driver.findElement(By.id("metadata.buildingCondition")).click();',
+          '      return driver.findElement(By.id("metadata.buildingCondition")).sendKeys("n");',
+          '      return driver.findElement(By.id("metadata.furnishedType")).click();',
+          '      return driver.findElement(By.id("metadata.furnishedType")).sendKeys("s");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("price")).sendKeys('+this.fieldData.price+');',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("region_1")).click();',
+          '      return driver.findElement(By.id("region_1")).sendKeys("s");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          
+        ]        
+        var generated = ""    
+        var num = 0  
+        for(var i=parseInt(from),j=0;j<4;i+=4000,j++){
+          generated += " setTimeout(async()=>{ \n\n\n\n\n \t " + complement[j] + " \n\n  }, " + i + ")\n";
+          num=i
+        }
+        for(var i=num+4000,j=4;j<complement.length;i+=1000,j++){
+          generated += " setTimeout(async()=>{ \n\n\n\n\n \t  " + complement[j] + " \n\n  }, " + i + ")\n";
+        }
+        this.fieldData["generated"] = generated;      
+
+        this.data.addMaster(this.fieldData);    
+
+
+    }else if(this.fieldData.category=="Inmuebles en venta"&&this.fieldData.category2=="Casa"){
+
+      
+      var complement = [
+        '      return driver.get("https://www.corotos.com.do/create")      ',
+        '      return driver.findElement(By.id("_tealiumModalClose")).click();',
+        '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("c:/Users/PUBLICADOR_COROTOS1/Desktop/proyecto.jpg");',
+        '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+        '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
+        '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
+        '      return driver.findElement(By.id("category_0")).click();',
+        '      return driver.findElement(By.id("category_0")).sendKeys("i");',
+        '      return driver.findElement(By.id("category_0")).sendKeys("i");',
+        '      return driver.findElement(By.tagName("body")).click();',
+        '      return driver.findElement(By.id("category_1")).click();',
+        '      return driver.findElement(By.id("category_1")).sendKeys("c");',
+        '      return driver.findElement(By.tagName("body")).click();',
+        '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+        '      return driver.findElement(By.id("metadata.rooms")).sendKeys("3");',
+        '      return driver.findElement(By.id("metadata.bathrooms")).sendKeys("2");',
+        '      return driver.findElement(By.id("metadata.constructionArea")).sendKeys("110");',
+        '      return driver.findElement(By.id("metadata.buildingCondition")).click();',
+        '      return driver.findElement(By.id("metadata.buildingCondition")).sendKeys("n");',
+        '      return driver.findElement(By.id("metadata.furnishedType")).click();',
+        '      return driver.findElement(By.id("metadata.furnishedType")).sendKeys("s");',
+        '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+        '      return driver.findElement(By.id("price")).sendKeys('+this.fieldData.price+');',
+        '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+        '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+        '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+        '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+        '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+        '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+        '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+        '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+        '      return driver.findElement(By.tagName("body")).click();',
+        '      return driver.findElement(By.id("region_1")).click();',
+        '      return driver.findElement(By.id("region_1")).sendKeys("s");',
+        '      return driver.findElement(By.tagName("body")).click();',
+        '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+        
+      ]                
+        var generated = ""    
+        var num = 0  
+        for(var i=parseInt(from),j=0;j<4;i+=4000,j++){
+          generated += " setTimeout(async()=>{ \n\n\n\n\n \t " + complement[j] + " \n\n  }, " + i + ")\n";
+          num=i
+        }
+        for(var i=num+4000,j=4;j<complement.length;i+=1000,j++){
+          generated += " setTimeout(async()=>{ \n\n\n\n\n \t " + complement[j] + " \n\n  }, " + i + ")\n";
+        }
+        this.fieldData["generated"] = generated;        
+    
+        this.data.addMaster(this.fieldData);    
+
+
+    }else{
+      
+      
+        var complement = [
+          '      return driver.get("https://www.corotos.com.do/create")      ',
+          '      return driver.findElement(By.id("_tealiumModalClose")).click();',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/honda_fit_rojo_0-3.jpeg");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("title")).sendKeys(dataMaster3.header);',
+          '      return driver.findElement(By.id("description")).sendKeys(dataMaster3.description);',
+          '      return driver.findElement(By.id("category_0")).click();',
+          '      return driver.findElement(By.id("category_0")).sendKeys("e");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("category_1")).click();',
+          '      return driver.findElement(By.id("category_1")).sendKeys("c");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("metadata.condicion")).click();',
+          '      return driver.findElement(By.id("metadata.condition")).sendKeys("n");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.id("price")).sendKeys('+this.fieldData.price+');',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("region_0")).click();',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.id("region_0")).sendKeys("s");',
+          '      return driver.findElement(By.tagName("body")).click();',
+          '      return driver.findElement(By.id("region_1")).click();',
+          '      return driver.findElement(By.id("region_1")).sendKeys("s");',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
+          '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();'          
+        ]  
+
+      var generated = ""    
+      var num = 0  
+      for(var i=parseInt(from),j=0;j<4;i+=4000,j++){
+        generated += " setTimeout(async()=>{ \n\n\n\n\n \t  " + complement[j] + " \n\n  }, " + i + ")\n";
+        num=i
+      }
+      for(var i=num+4000,j=4;j<complement.length;i+=1000,j++){
+        generated += " setTimeout(async()=>{ \n\n\n\n\n \t " + complement[j] + " \n\n  }, " + i + ")\n";
+      }
+      this.fieldData["generated"] = generated; 
+
+      this.data.addMaster(this.fieldData);    
+
+
+      
+    }
     for(let x=0,num=1000;x<this.files.length;x++,num+=3000){     
       setTimeout(() => {        
           this.fieldData["url"] = this.url[x];      
@@ -222,6 +556,9 @@ export class DialogOverviewExampleDialogMasterEdit {
     this.fieldData["category"] = filtered.category
     this.fieldData["field"] = filtered.field
     this.fieldData["order"] = filtered.order
+    this.fieldData["sequence"] = filtered.sequence
+    this.fieldData["header"] = filtered.header
+    this.fieldData["price"] = filtered.price
   }
 
   onClick(){     

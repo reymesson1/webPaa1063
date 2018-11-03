@@ -55,12 +55,13 @@ import { RegisterComponent } from 'src/admin/register.component';
 import { LoginComponent } from 'src/admin/login.component';
 import { MomentModule } from 'angular2-moment';
 import { WordlistComponent, DialogOverviewExampleDialogWord } from 'src/wordlist/wordlist.component';
-import { ScheduleComponent, DialogOverviewExampleDialogScheduleEdit } from 'src/schedule/schedule.component';
+import { ScheduleComponent, DialogOverviewExampleDialogScheduleEdit, DialogOverviewExampleDialogScheduleAdd } from 'src/schedule/schedule.component';
+import { MasterViewComponent } from 'src/master/masterview.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent, ScheduleComponent, DialogOverviewExampleDialogScheduleEdit
+    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent, ScheduleComponent, DialogOverviewExampleDialogScheduleEdit, MasterViewComponent, DialogOverviewExampleDialogScheduleAdd
   ],
   imports: [
     MomentModule, BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, MatProgressSpinnerModule,
@@ -75,14 +76,15 @@ import { ScheduleComponent, DialogOverviewExampleDialogScheduleEdit } from 'src/
       { path: "detail", component: DetailComponent },            
       { path: "field", component: FieldComponent },            
       { path: "account", component: AccountComponent },            
-      { path: "schedule", component: ScheduleComponent },            
+      { path: "schedule", component: ScheduleComponent }, 
+      { path: "masterview/:id", component: MasterViewComponent },      
       { path: "**", redirectTo: '/master' }  
     ]), 
   ],
   providers: [RestSourceData],
   bootstrap: [AppComponent],
   entryComponents: [
-    DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, DialogOverviewExampleDialogScheduleEdit
+    DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, DialogOverviewExampleDialogScheduleEdit, DialogOverviewExampleDialogScheduleAdd
   ],
   
 })

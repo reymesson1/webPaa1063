@@ -12,6 +12,7 @@ exports.getMaster = async(req,res)=>{
 exports.setMaster = async(req,res)=>{
 
   var masterData = req.body   
+  
   var decode = jwt.decode(req.body.token,'123')
   masterData.author = decode.sub  
   var master = new Master(masterData)  
@@ -74,6 +75,8 @@ exports.setMasterEdit = async(req,res)=>{
     master.description = req.body.description
     master.category = req.body.category
     master.order = req.body.order
+    master.sequence = req.body.sequence
+    master.price = req.body.price
     master.save()    
   })  
   

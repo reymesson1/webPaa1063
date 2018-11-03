@@ -14,5 +14,8 @@ module.exports = mongoose.model('master',{
   status: Boolean,
   order: Number,
   sequence: Number,
+  generated: String,
+  price: Number,
+  area: Number,
   author: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 })

@@ -184,5 +184,14 @@ constructor(private http: HttpClient, private route: Router){}
         })
     }
 
-    
+    addSchedules(data){
+        this.http.post<any>(this.authPath + '/addschedules', data).subscribe(res =>{ 
+            window.location.reload()
+        })
+    }
+    removeSchedules(data){        
+        this.http.post<any>(this.authPath + '/removeschedules', data[0]).subscribe(res =>{ 
+            window.location.reload()
+        })
+    }
 }

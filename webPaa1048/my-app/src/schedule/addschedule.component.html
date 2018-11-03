@@ -21,6 +21,17 @@
   </div>
   <div class="col-md-3"></div>
 </div>
+<div mat-dialog-content>
+  <div class="col-md-3">
+    <p>Alias: </p>
+  </div>
+  <div class="col-md-6">
+    <mat-form-field>    
+      <input matInput  type="text" [(ngModel)]="fieldData.alias" name="alias">
+    </mat-form-field>
+  </div>
+  <div class="col-md-3"></div>
+</div>
 <div mat-dialog-actions>
     <div class="row">
       <div class="pull-right">

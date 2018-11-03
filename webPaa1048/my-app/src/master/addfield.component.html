@@ -64,26 +64,14 @@
             </mat-form-field>
       <ng-template matStepLabel>Done</ng-template>
       <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Quantity" [(ngModel)]="fieldData.quantity" name="quantity" ></textarea>
+          <textarea matInput placeholder="From" [(ngModel)]="fieldData.from" name="from" ></textarea>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Location" [(ngModel)]="fieldData.location" name="location" ></textarea>
-      </mat-form-field>
+        <textarea matInput placeholder="Price" [(ngModel)]="fieldData.price" name="price" type="number" ></textarea>
+    </mat-form-field>
       <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Place" [(ngModel)]="fieldData.place" name="place" ></textarea>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">        
-          <mat-select [(ngModel)]="fieldData.category" name="category">
-            <mat-option value="Spanish">Spanish</mat-option>          
-            <mat-option value="English">English</mat-option>          
-          </mat-select>
-      </mat-form-field>        
-      <mat-form-field class="example-full-width">        
-          <mat-select [(ngModel)]="fieldData.category" name="category">
-            <mat-option value="Spanish">Spanish</mat-option>          
-            <mat-option value="English">English</mat-option>          
-          </mat-select>
-      </mat-form-field>        
+        <textarea matInput placeholder="Area" [(ngModel)]="fieldData.area" name="area" type="number" ></textarea>
+    </mat-form-field>
       <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button [mat-dialog-close]="fieldData.description" (click)="stepper.reset();onClick()">Save</button>

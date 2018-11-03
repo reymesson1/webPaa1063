@@ -1,19 +1,38 @@
 var mongoose = require('mongoose');
 var Schedule = require('../models/schedule.js');
-
 exports.schedule = async(req,res)=>{
-
-    var schedule = await Schedule.find({})
-    
+    var schedule = await Schedule.find({})    
     res.send(schedule)  
 }
-
+exports.addschedule = async(req,res)=>{    
+    var schedule = new Schedule(req.body)    
+    schedule.save(function(err){
+        if(!err){
+            console.log('Saved')
+        }
+    })    
+    res.send(schedule)  
+}
+exports.removeschedule = async(req,res)=>{
+    const ObjectId = mongoose.Types.ObjectId;      
+    var _id = new ObjectId(req.body._id);
+    var schedule = await Schedule.findOne({"_id":_id},function(err,sch){
+        if(!err){
+            sch.remove(function(){
+                console.log('Schedule removed')
+            });
+        }
+    }); 
+    res.send(schedule);
+}
 exports.editschedule = async(req,res)=>{
     const ObjectId = mongoose.Types.ObjectId;    
     var _id = new ObjectId(req.body._id);    
     var schedule = await Schedule.findOne({"_id":_id},function(err, sch){        
         if(!err){
             sch.start = req.body.start
+            sch.name = req.body.name
+            sch.alias = req.body.alias
             sch.save(function(){
                 console.log('updated schedule', sch);
                 res.send(sch);
