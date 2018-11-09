@@ -16,6 +16,8 @@ var dataMaster2 = {}
 var dataMaster3 = {}
 var dataMaster4 = {}
 var dataMaster5 = {}
+var dataMaster6 = {}
+
 
   setTimeout(async() => {
 
@@ -53,6 +55,11 @@ var dataMaster5 = {}
     dataMaster5["header"] = master5.header
     dataMaster5["description"] = master5.description
 
+    var master6= await Master.findOne({"sequence":5})
+    console.log(master6)      
+    dataMaster6["title"] = master6.title
+    dataMaster6["header"] = master6.header
+    dataMaster6["description"] = master6.description
     
   }, 6000);
 
@@ -1731,7 +1738,7 @@ setTimeout(async()=>{
 
 
 
-  return driver.findElement(By.id("title")).sendKeys(dataMaster5.header); 
+  return driver.findElement(By.id("title")).sendKeys(dataMaster6.header); 
 
 }, 386000)
 setTimeout(async()=>{ 
@@ -1739,7 +1746,7 @@ setTimeout(async()=>{
 
 
 
-  return driver.findElement(By.id("description")).sendKeys(dataMaster5.description); 
+  return driver.findElement(By.id("description")).sendKeys(dataMaster6.description); 
 
 }, 387000)
 setTimeout(async()=>{ 
