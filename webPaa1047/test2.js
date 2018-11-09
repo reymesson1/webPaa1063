@@ -26,7 +26,7 @@ var kw = require('./models/keyword.js');
   var master = Master.findOne({"sequence":0},function(err,master){
     if(!err){
      
-      master.header = master.title + " A" + new Date().getTime()
+      master.header = master.title + " " + new Date().getTime()
       //master.header = master.title + kws.name
       master.order = master.order + 1
       master.save();
@@ -35,7 +35,7 @@ var kw = require('./models/keyword.js');
 
   var master = Master.findOne({"sequence":1},function(err,master){
     if(!err){
-      master.header = master.title + " B" + new Date().getTime()
+      master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
@@ -43,11 +43,25 @@ var kw = require('./models/keyword.js');
 
   var master = Master.findOne({"sequence":2},function(err,master){
     if(!err){
-      master.header = master.title + " C" + new Date().getTime()
+      master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
   })
+  var master = Master.findOne({"sequence":3},function(err,master){
+    if(!err){
+      master.header = master.title + " " + new Date().getTime()
+      master.order = master.order + 1
+      master.save();
+    }
+})
+  var master = Master.findOne({"sequence":4},function(err,master){
+    if(!err){
+      master.header = master.title + " " + new Date().getTime()
+      master.order = master.order + 1
+      master.save();
+    }
+})
    }, 6000);
 
   // setTimeout(async() => {
@@ -79,7 +93,7 @@ var dataMaster = {}
 
 driver.get('https://www.corotos.com.do/profile');
 
-driver.findElement(By.id('pid_email')).sendKeys('santiagosantosauto@gmail.com')
+driver.findElement(By.id('pid_email')).sendKeys('reymesson@gmail.com')
 driver.findElement(By.className('_2QhqT _3NHOV _3z-oQ _2El2O _7xPBo _2pXQq _3WoTQ gO5qu _2h31L _1Dh7N')).click()
 
 driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-code')),20000)
@@ -106,7 +120,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     }, 25000);
     setTimeout(async() => {      
       console.log('esperar4....') 
-      return driver.findElement(By.className('_3X0nW _11nXj l-BkY')).click()
+      return driver.findElement(By.className('_2mkTO')).click()
       //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
     }, 30000);
     setTimeout(async() => {      
@@ -134,7 +148,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     }, 60000);
     setTimeout(async() => {      
       console.log('esperar4....') 
-      return driver.findElement(By.className('_3X0nW _11nXj l-BkY')).click()
+      return driver.findElement(By.className('_2mkTO')).click()
       //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
     }, 70000);
     setTimeout(async() => {      
@@ -162,7 +176,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     }, 100000);
     setTimeout(async() => {      
       console.log('esperar4....') 
-      return driver.findElement(By.className('_3X0nW _11nXj l-BkY')).click()
+      return driver.findElement(By.className('_2mkTO')).click()
       //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
     }, 150000);
     setTimeout(async() => {      
@@ -190,7 +204,7 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
     }, 200000);
     setTimeout(async() => {      
       console.log('esperar4....') 
-      return driver.findElement(By.className('_3X0nW _11nXj l-BkY')).click()
+      return driver.findElement(By.className('_2mkTO')).click()
       //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
     }, 210000);
     setTimeout(async() => {      
@@ -207,6 +221,62 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
       //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
       //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
     }, 230000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.navigate().refresh();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 240000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('_2mkTO')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 2420000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('cOriw _1jhdI btn-default')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 244000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.findElement(By.xpath("//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 246000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.navigate().refresh();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 250000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('_2mkTO')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 2520000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      return driver.findElement(By.className('cOriw _1jhdI btn-default')).click()
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 254000);
+    setTimeout(async() => {      
+      console.log('esperar4....') 
+      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
+      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
+      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
+      driver.findElement(By.xpath("//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
+      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
+    }, 256000);
     // setTimeout(async() => {      
     //   console.log('esperar5....')
     //   return driver.findElement(By.id("title")).sendKeys(dataMaster.title);

@@ -6,8 +6,8 @@ var app = express();
 var Post = require('./models/post.js');
 
 var mailListener = new MailListener({
-  username: "santiagosantosauto",
-  password: "leysha23",
+  username: "reymesson",
+  password: "@ltagracia113",
   host: "imap.gmail.com",
   port: 993, // imap port
   tls: true,
