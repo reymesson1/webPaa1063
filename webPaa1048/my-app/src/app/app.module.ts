@@ -57,11 +57,12 @@ import { MomentModule } from 'angular2-moment';
 import { WordlistComponent, DialogOverviewExampleDialogWord } from 'src/wordlist/wordlist.component';
 import { ScheduleComponent, DialogOverviewExampleDialogScheduleEdit, DialogOverviewExampleDialogScheduleAdd } from 'src/schedule/schedule.component';
 import { MasterViewComponent } from 'src/master/masterview.component';
+import { GeneratorComponent } from 'src/generator/generator.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent, ScheduleComponent, DialogOverviewExampleDialogScheduleEdit, MasterViewComponent, DialogOverviewExampleDialogScheduleAdd
+    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent, ScheduleComponent, DialogOverviewExampleDialogScheduleEdit, MasterViewComponent, DialogOverviewExampleDialogScheduleAdd, GeneratorComponent
   ],
   imports: [
     MomentModule, BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, MatProgressSpinnerModule,
@@ -77,6 +78,7 @@ import { MasterViewComponent } from 'src/master/masterview.component';
       { path: "field", component: FieldComponent },            
       { path: "account", component: AccountComponent },            
       { path: "schedule", component: ScheduleComponent }, 
+      { path: "generator", component: GeneratorComponent }, 
       { path: "masterview/:id", component: MasterViewComponent },      
       { path: "**", redirectTo: '/master' }  
     ]), 

@@ -1,0 +1,22 @@
+<mat-card>
+  <div class="example-container">
+    <mat-form-field>
+      <input type="number" [(ngModel)]="fieldData.num" name="num" matInput placeholder="Input">
+    </mat-form-field>
+    
+    <mat-form-field>
+      <textarea matInput placeholder="Textarea" rows="10" cols="50" [(ngModel)]="fieldData.generated" name="generated"></textarea>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-select placeholder="Select">
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <div class="pull-right">
+      <button mat-button mat-raised-button color="primary" (click)="generate()">Generate</button>    
+    </div>
+  </div>
+</mat-card>
