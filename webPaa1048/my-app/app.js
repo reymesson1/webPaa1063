@@ -46,7 +46,7 @@ app.post('/removeschedules', scheduleController.removeschedule)
 app.get('/resetschedules', scheduleController.resetschedule)
 app.get('/resetscheduleswithvalue', scheduleController.resetschedulewithvalue)
 app.post('/resetnowschedules', scheduleController.resetnowschedule)
-mongoose.connect('mongodb://localhost:27017/project14',(err)=>{
+mongoose.connect('mongodb://localhost:27017/project2',(err)=>{
   if(!err){
       console.log('Connected to mongo Database');
   }

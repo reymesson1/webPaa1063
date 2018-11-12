@@ -7,6 +7,8 @@ var Post = require('./models/post.js');
 var Master = require('./models/master.js');
 var kw = require('./models/keyword.js');
 
+var abc = "abcdefghijklmnopqrstuvwxyz"
+
 // var CronJob = require('cron').CronJob;
 //  new CronJob('0 40 * * * *', function() {
 //    console.log('You will see this message every second');
@@ -25,8 +27,10 @@ var kw = require('./models/keyword.js');
 
   var master = Master.findOne({"sequence":0},function(err,master){
     if(!err){
-     
-      master.header = master.title + " " + new Date().getTime()
+
+      var titleText = new Date().getTime()
+
+      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
       //master.header = master.title + kws.name
       master.order = master.order + 1
       master.save();
@@ -35,7 +39,12 @@ var kw = require('./models/keyword.js');
 
   var master = Master.findOne({"sequence":1},function(err,master){
     if(!err){
-      master.header = master.title + " " + new Date().getTime()
+
+      var titleText = new Date().getTime()
+      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+
+      //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
@@ -43,46 +52,111 @@ var kw = require('./models/keyword.js');
 
   var master = Master.findOne({"sequence":2},function(err,master){
     if(!err){
-      master.header = master.title + " " + new Date().getTime()
+
+      var titleText = new Date().getTime()
+      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+
+      //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
   })
+
   var master = Master.findOne({"sequence":3},function(err,master){
     if(!err){
-      master.header = master.title + " " + new Date().getTime()
+
+      var titleText = new Date().getTime()
+      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+
+      //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
-})
+  })
+  
   var master = Master.findOne({"sequence":4},function(err,master){
     if(!err){
-      master.header = master.title + " " + new Date().getTime()
+
+      var titleText = new Date().getTime()
+      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+
+      //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
-})
+  })
+
   var master = Master.findOne({"sequence":5},function(err,master){
     if(!err){
-      master.header = master.title + " " + new Date().getTime()
+
+      var titleText = new Date().getTime()
+      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+
+      //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
-})
+  })
+
   var master = Master.findOne({"sequence":6},function(err,master){
     if(!err){
-      master.header = master.title + " " + new Date().getTime()
+
+      var titleText = new Date().getTime()
+      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+
+      //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
-})
-  var master = Master.findOne({"sequence":7},function(err,master){
-    if(!err){
-      master.header = master.title + " " + new Date().getTime()
-      master.order = master.order + 1
-      master.save();
-    }
-})
+  })
+
+//   var master = Master.findOne({"sequence":2},function(err,master){
+//     if(!err){
+//       master.header = master.title + " " + new Date().getTime()
+//       master.order = master.order + 1
+//       master.save();
+//     }
+//   })
+//   var master = Master.findOne({"sequence":3},function(err,master){
+//     if(!err){
+//       master.header = master.title + " " + new Date().getTime()
+//       master.order = master.order + 1
+//       master.save();
+//     }
+// })
+//   var master = Master.findOne({"sequence":4},function(err,master){
+//     if(!err){
+//       master.header = master.title + " " + new Date().getTime()
+//       master.order = master.order + 1
+//       master.save();
+//     }
+// })
+//   var master = Master.findOne({"sequence":5},function(err,master){
+//     if(!err){
+//       master.header = master.title + " " + new Date().getTime()
+//       master.order = master.order + 1
+//       master.save();
+//     }
+// })
+//   var master = Master.findOne({"sequence":6},function(err,master){
+//     if(!err){
+//       master.header = master.title + " " + new Date().getTime()
+//       master.order = master.order + 1
+//       master.save();
+//     }
+// })
+//   var master = Master.findOne({"sequence":7},function(err,master){
+//     if(!err){
+//       master.header = master.title + " " + new Date().getTime()
+//       master.order = master.order + 1
+//       master.save();
+//     }
+// })
    }, 6000);
 
   // setTimeout(async() => {
@@ -139,334 +213,306 @@ driver.wait(webdriver.until.elementLocated(webdriver.By.id('otp-verification-cod
 
       return driver.get('https://www.corotos.com.do/profile')      
     }, 25000);
-    setTimeout(async() => {      
-      console.log('esperar4....') 
-      return driver.findElement(By.className('_2mkTO')).click()
-      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
-    }, 30000);
-    setTimeout(async() => {      
-      console.log('esperar4....') 
-      return driver.findElement(By.className('cOriw _1jhdI btn-default')).click()
-      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
-    }, 40000);
-    setTimeout(async() => {      
-      console.log('esperar4....') 
-      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
-      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
-      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
-      driver.findElement(By.xpath("//div[@id='delete-ad-modal']/div/div[3]/button")).click();
-      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
-      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
-    }, 50000);
-    setTimeout(async() => {      
-      console.log('esperar4....') 
-      //return driver.findElement(By.className('cOriw _1jhdI _2oWpI')).click()
-      //console.log(driver.findElement(By.className('cOriw _1jhdI _2oWpI')));
-      //console.log(driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).getText())
-      driver.navigate().refresh();
-      //return driver.findElement(By.xpath("xpath=//div[@id='delete-ad-modal']/div/div[3]/button")).click();
-      //return driver.findElement(By.xpath("//input[@type='file']")).sendKeys("c:/Users/Rey Messon/Desktop/img(97).jpg");
-    }, 60000);
     setTimeout(async()=>{ 
 
       return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 100000)
-    setTimeout(async()=>{ 
+}, 100000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 104000)
-    setTimeout(async()=>{ 
+}, 104000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 108000)
-    setTimeout(async()=>{ 
+}, 108000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 112000)
-    setTimeout(async()=>{ 
+}, 112000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 116000)
-    setTimeout(async()=>{ 
+}, 116000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 120000)
-    setTimeout(async()=>{ 
+}, 120000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 124000)
-    setTimeout(async()=>{ 
+}, 124000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 128000)
-    setTimeout(async()=>{ 
+}, 128000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 132000)
-    setTimeout(async()=>{ 
+}, 132000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 136000)
-    setTimeout(async()=>{ 
+}, 136000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 140000)
-    setTimeout(async()=>{ 
+}, 140000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 144000)
-    setTimeout(async()=>{ 
+}, 144000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 148000)
-    setTimeout(async()=>{ 
+}, 148000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 152000)
-    setTimeout(async()=>{ 
+}, 152000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 156000)
-    setTimeout(async()=>{ 
+}, 156000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 160000)
-    setTimeout(async()=>{ 
+}, 160000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 164000)
-    setTimeout(async()=>{ 
+}, 164000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 168000)
-    setTimeout(async()=>{ 
+}, 168000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 172000)
-    setTimeout(async()=>{ 
+}, 172000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 176000)
-    setTimeout(async()=>{ 
+}, 176000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 180000)
-    setTimeout(async()=>{ 
+}, 180000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 184000)
-    setTimeout(async()=>{ 
+}, 184000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 188000)
-    setTimeout(async()=>{ 
+}, 188000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 192000)
-    setTimeout(async()=>{ 
+}, 192000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 196000)
-    setTimeout(async()=>{ 
+}, 196000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 200000)
-    setTimeout(async()=>{ 
+}, 200000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 204000)
-    setTimeout(async()=>{ 
+}, 204000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 208000)
-    setTimeout(async()=>{ 
+}, 208000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 212000)
-    setTimeout(async()=>{ 
+}, 212000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 216000)
-    setTimeout(async()=>{ 
+}, 216000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 220000)
-    setTimeout(async()=>{ 
+}, 220000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 224000)
-    setTimeout(async()=>{ 
+}, 224000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 228000)
-    setTimeout(async()=>{ 
+}, 228000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 232000)
-    setTimeout(async()=>{ 
+}, 232000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 236000)
-    setTimeout(async()=>{ 
+}, 236000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 240000)
-    setTimeout(async()=>{ 
+}, 240000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 244000)
-    setTimeout(async()=>{ 
+}, 244000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 248000)
-    setTimeout(async()=>{ 
+}, 248000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 252000)
-    setTimeout(async()=>{ 
+}, 252000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 256000)
-    setTimeout(async()=>{ 
+}, 256000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 260000)
-    setTimeout(async()=>{ 
+}, 260000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 264000)
-    setTimeout(async()=>{ 
+}, 264000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 268000)
-    setTimeout(async()=>{ 
+}, 268000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 272000)
-    setTimeout(async()=>{ 
+}, 272000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 276000)
-    setTimeout(async()=>{ 
+}, 276000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 280000)
-    setTimeout(async()=>{ 
+}, 280000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 284000)
-    setTimeout(async()=>{ 
+}, 284000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 288000)
-    setTimeout(async()=>{ 
+}, 288000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 292000)
-    setTimeout(async()=>{ 
+}, 292000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 296000)
-    setTimeout(async()=>{ 
+}, 296000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 300000)
-    setTimeout(async()=>{ 
+}, 300000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 304000)
-    setTimeout(async()=>{ 
+}, 304000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 308000)
-    setTimeout(async()=>{ 
+}, 308000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 312000)
-    setTimeout(async()=>{ 
+}, 312000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 316000)
-    setTimeout(async()=>{ 
+}, 316000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 320000)
-    setTimeout(async()=>{ 
+}, 320000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("_2mkTO")).click() 
+      return driver.findElement(By.className("_2mkTO")).click() 
 
-    }, 324000)
-    setTimeout(async()=>{ 
+}, 324000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
+      return driver.findElement(By.className("cOriw _1jhdI btn-default")).click() 
 
-    }, 328000)
-    setTimeout(async()=>{ 
+}, 328000)
+setTimeout(async()=>{ 
 
-          return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
+      return driver.findElement(By.xpath('//div[@id="delete-ad-modal"]/div/div[3]/button')).click() 
 
-    }, 332000)
-    setTimeout(async()=>{ 
+}, 332000)
+setTimeout(async()=>{ 
 
-          return driver.navigate().refresh(); 
+      return driver.navigate().refresh(); 
 
-    }, 336000)
+}, 336000)
 
 
 }).catch(()=>{
