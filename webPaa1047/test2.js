@@ -25,12 +25,14 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
 
   var kws = await kw.findOne({"order":dataMaster.order});
 
+  console.log(kws.name);
+
   var master = Master.findOne({"sequence":0},function(err,master){
     if(!err){
 
       var titleText = new Date().getTime()
 
-      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
       //master.header = master.title + kws.name
       master.order = master.order + 1
       master.save();
@@ -41,7 +43,7 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
       //master.header = master.title + " " + new Date().getTime()
@@ -54,7 +56,7 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
       //master.header = master.title + " " + new Date().getTime()
@@ -67,7 +69,7 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
       //master.header = master.title + " " + new Date().getTime()
@@ -80,7 +82,7 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
       //master.header = master.title + " " + new Date().getTime()
@@ -93,7 +95,7 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
       //master.header = master.title + " " + new Date().getTime()
@@ -106,7 +108,32 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+
+      //master.header = master.title + " " + new Date().getTime()
+      master.order = master.order + 1
+      master.save();
+    }
+  })
+
+  var master = Master.findOne({"sequence":7},function(err,master){
+    if(!err){
+
+      var titleText = new Date().getTime()
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+
+      //master.header = master.title + " " + new Date().getTime()
+      master.order = master.order + 1
+      master.save();
+    }
+  })
+  var master = Master.findOne({"sequence":8},function(err,master){
+    if(!err){
+
+      var titleText = new Date().getTime()
+      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
       //master.header = master.title + " " + new Date().getTime()

@@ -153,7 +153,6 @@ export class DialogOverviewExampleDialogMaster {
 
   onClick(){      
     console.log(this.nextDay.toLocaleDateString());
-    console.log(this.files[0].name)
     this.fieldData["date"] = this.nextDay.toLocaleDateString() + " " + this.nextDay.toLocaleTimeString();
     this.fieldData["url"] = [];
     this.fieldData["file"] = [];
@@ -170,8 +169,7 @@ export class DialogOverviewExampleDialogMaster {
         var complement = [
           '      return driver.get("https://www.corotos.com.do/create")',
           '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/honda_fit_rojo.jpg");',
           '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
           '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
           '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
@@ -251,8 +249,7 @@ export class DialogOverviewExampleDialogMaster {
         var complement = [
           '      return driver.get("https://www.corotos.com.do/create")',
           '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/honda_fit_rojo_3-7.jpeg");',
           '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
           '      return driver.findElement(By.id("title")).sendKeys(dataMaster8.header);',
           '      return driver.findElement(By.id("description")).sendKeys(dataMaster8.description);',
@@ -333,8 +330,7 @@ export class DialogOverviewExampleDialogMaster {
         var complement = [
           '      return driver.get("https://www.corotos.com.do/create")      ',
           '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("c:/Users/PUBLICADOR_COROTOS1/Desktop/proyecto.jpg");',
           '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
           '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
           '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
@@ -391,8 +387,7 @@ export class DialogOverviewExampleDialogMaster {
       var complement = [
         '      return driver.get("https://www.corotos.com.do/create")      ',
         '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-        '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-        '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+        '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("c:/Users/PUBLICADOR_COROTOS1/Desktop/proyecto.jpg");',
         '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
         '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
         '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
@@ -448,8 +443,7 @@ export class DialogOverviewExampleDialogMaster {
         var complement = [
           '      return driver.get("https://www.corotos.com.do/create")      ',
           '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/honda_fit_rojo_0-3.jpeg");',
           '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
           '      return driver.findElement(By.id("title")).sendKeys(dataMaster3.header);',
           '      return driver.findElement(By.id("description")).sendKeys(dataMaster3.description);',
@@ -511,7 +505,6 @@ export class DialogOverviewExampleDialogMaster {
 
   onSelectFile(event) {        
     this.files = event.target.files
-    console.log(event.target.files)
     for(let x=0,num=1000;x<this.files.length;x++,num+=3000){      
       setTimeout(() => {         
         if (this.files && this.files[x]) {
