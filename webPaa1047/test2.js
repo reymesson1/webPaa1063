@@ -32,19 +32,22 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
 
       var titleText = new Date().getTime()
 
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
-      //master.header = master.title + kws.name
+      master.header = master.title + " " + kws.name + " " +  " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + new Date().getTime()
+      //master.header = master.title 
       master.order = master.order + 1
       master.save();
     }
   })
 
+  
   var master = Master.findOne({"sequence":1},function(err,master){
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
+      master.header = master.title + " " + kws.name + " " +  " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
       //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
@@ -56,9 +59,10 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
+      master.header = master.title + " " + kws.name + " " +  " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
       //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
@@ -69,9 +73,9 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
-
+      master.header = master.title + " " + kws.name + " " +  " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
       //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
@@ -82,8 +86,9 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
+      master.header = master.title + " " + kws.name + " " +  " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
       //master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
@@ -95,10 +100,12 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+      master.header = master.title + " " + kws.name + " " +  " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
-      //master.header = master.title + " " + new Date().getTime()
+     // master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
@@ -108,7 +115,9 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+
+      master.header = master.title + " " + kws.name + " " +  " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
       //master.header = master.title + " " + new Date().getTime()
@@ -116,15 +125,15 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
       master.save();
     }
   })
-
+/*
   var master = Master.findOne({"sequence":7},function(err,master){
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
-      //master.header = master.title + " " + new Date().getTime()
+      master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
@@ -133,77 +142,19 @@ var abc = "abcdefghijklmnopqrstuvwxyz"
     if(!err){
 
       var titleText = new Date().getTime()
-      master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
+      //master.header = master.title + " " + kws.name + " " + " #" + titleText + " " + abc[titleText.toString().substring(7,8)] + abc[titleText.toString().substring(8,9)] + abc[titleText.toString().substring(9,10)] + abc[titleText.toString().substring(10,11)] 
 
 
-      //master.header = master.title + " " + new Date().getTime()
+      master.header = master.title + " " + new Date().getTime()
       master.order = master.order + 1
       master.save();
     }
   })
+*/
 
-//   var master = Master.findOne({"sequence":2},function(err,master){
-//     if(!err){
-//       master.header = master.title + " " + new Date().getTime()
-//       master.order = master.order + 1
-//       master.save();
-//     }
-//   })
-//   var master = Master.findOne({"sequence":3},function(err,master){
-//     if(!err){
-//       master.header = master.title + " " + new Date().getTime()
-//       master.order = master.order + 1
-//       master.save();
-//     }
-// })
-//   var master = Master.findOne({"sequence":4},function(err,master){
-//     if(!err){
-//       master.header = master.title + " " + new Date().getTime()
-//       master.order = master.order + 1
-//       master.save();
-//     }
-// })
-//   var master = Master.findOne({"sequence":5},function(err,master){
-//     if(!err){
-//       master.header = master.title + " " + new Date().getTime()
-//       master.order = master.order + 1
-//       master.save();
-//     }
-// })
-//   var master = Master.findOne({"sequence":6},function(err,master){
-//     if(!err){
-//       master.header = master.title + " " + new Date().getTime()
-//       master.order = master.order + 1
-//       master.save();
-//     }
-// })
-//   var master = Master.findOne({"sequence":7},function(err,master){
-//     if(!err){
-//       master.header = master.title + " " + new Date().getTime()
-//       master.order = master.order + 1
-//       master.save();
-//     }
-// })
    }, 6000);
 
-  // setTimeout(async() => {
 
-  //   var kws = await kw.findOne({"order":num});
-
-  //   var master = Master.findOne({"status":true},function(err,master){
-  //     if(!err){
-  //       master.title = "Honda Fit 2012 RD$430,000 " + kws.name
-  //       master.save();
-  //     }
-  //   })
-
-  //   num++;
-  //   //console.log(master)      
-  //   // dataMaster["title"] = master.title
-  //   // dataMaster["description"] = master.description
-
-    
-  // }, 2000);
 
 var By = webdriver.By;
 

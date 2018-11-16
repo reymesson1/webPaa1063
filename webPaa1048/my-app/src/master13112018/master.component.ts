@@ -161,8 +161,6 @@ export class DialogOverviewExampleDialogMaster {
     this.fieldData["pathImage"] = [];
     this.fieldData["status"] = false;         
     this.fieldData["order"] = 0;   
-    this.fieldData["category"] = this.fieldData.category;   
-    this.fieldData["category2"] = this.fieldData.category2;   
     var generated = ""    
     var from = this.fieldData.from;
     console.log(this.fieldData.category)

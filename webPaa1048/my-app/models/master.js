@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 module.exports = mongoose.model('master',{    
   category: String,
+  category2: String,
   date: String,
   description: String,
   location: String,    
