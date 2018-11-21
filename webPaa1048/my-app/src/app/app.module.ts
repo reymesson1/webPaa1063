@@ -58,11 +58,12 @@ import { WordlistComponent, DialogOverviewExampleDialogWord } from 'src/wordlist
 import { ScheduleComponent, DialogOverviewExampleDialogScheduleEdit, DialogOverviewExampleDialogScheduleAdd } from 'src/schedule/schedule.component';
 import { MasterViewComponent } from 'src/master/masterview.component';
 import { GeneratorComponent } from 'src/generator/generator.component';
+import { ItemGeneratorComponent } from 'src/itemgenerator/itemgenerator.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent, ScheduleComponent, DialogOverviewExampleDialogScheduleEdit, MasterViewComponent, DialogOverviewExampleDialogScheduleAdd, GeneratorComponent
+    AppComponent, MasterComponent, DetailComponent, MenuLeftComponent, MenuRightComponent, FieldComponent, DialogOverviewExampleDialog, DialogOverviewExampleDialogEdit, DialogOverviewExampleDialogMaster, NavbarMainComponent, AccountComponent, UserInformationComponent, RegisterComponent, LoginComponent, DialogOverviewExampleDialogMasterEdit, DialogOverviewExampleDialogWord, WordlistComponent, ScheduleComponent, DialogOverviewExampleDialogScheduleEdit, MasterViewComponent, DialogOverviewExampleDialogScheduleAdd, GeneratorComponent, ItemGeneratorComponent
   ],
   imports: [
     MomentModule, BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, MatProgressSpinnerModule,
@@ -79,6 +80,7 @@ import { GeneratorComponent } from 'src/generator/generator.component';
       { path: "account", component: AccountComponent },            
       { path: "schedule", component: ScheduleComponent }, 
       { path: "generator", component: GeneratorComponent }, 
+      { path: "itemgenerator", component: ItemGeneratorComponent }, 
       { path: "masterview/:id", component: MasterViewComponent },      
       { path: "**", redirectTo: '/master' }  
     ]), 

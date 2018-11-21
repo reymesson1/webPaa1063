@@ -17,11 +17,15 @@ export class MasterComponent {
   global
   displayedColumns: string[] = ['position', 'date','title','name', 'weight', 'symbol', 'field', 'actions'];
   dataSource
+  dataUpdate : any = {}
   navbarData : any = {}    
   searchfield  
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   constructor(public dialog: MatDialog, public data: RestSourceData, public route : Router) {}
+  runScript(){
+    this.data.runScript(this.dataUpdate);
+  }
   Edit(i){  
     global=i
     let data = this.data.master.filter((master)=>{
@@ -172,8 +176,8 @@ export class DialogOverviewExampleDialogMaster {
         var complement = [
           '      return driver.get("https://www.corotos.com.do/create")',
           '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[0].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[1].name+'");',
           '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
           '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
           '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
@@ -253,8 +257,8 @@ export class DialogOverviewExampleDialogMaster {
         var complement = [
           '      return driver.get("https://www.corotos.com.do/create")',
           '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[0].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[1].name+'");',
           '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
           '      return driver.findElement(By.id("title")).sendKeys(dataMaster8.header);',
           '      return driver.findElement(By.id("description")).sendKeys(dataMaster8.description);',
@@ -335,8 +339,8 @@ export class DialogOverviewExampleDialogMaster {
         var complement = [
           '      return driver.get("https://www.corotos.com.do/create")      ',
           '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[0].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[1].name+'");',
           '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
           '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
           '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
@@ -393,8 +397,8 @@ export class DialogOverviewExampleDialogMaster {
       var complement = [
         '      return driver.get("https://www.corotos.com.do/create")      ',
         '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-        '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-        '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+        '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[0].name+'");',
+        '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[1].name+'");',
         '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
         '      return driver.findElement(By.id("title")).sendKeys(dataMaster.header);',
         '      return driver.findElement(By.id("description")).sendKeys(dataMaster.description);',
@@ -450,8 +454,8 @@ export class DialogOverviewExampleDialogMaster {
         var complement = [
           '      return driver.get("https://www.corotos.com.do/create")      ',
           '      return driver.findElement(By.id("_tealiumModalClose")).click();',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[0].name+'");',
-          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/'+this.files[1].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[0].name+'");',
+          '      return driver.findElement(By.xpath("//input[@type=\'file\']")).sendKeys("C:/Users/PUBLICADOR_COROTOS1/Desktop/anuncio/'+this.files[1].name+'");',
           '      return driver.findElement(By.xpath("//button[@type=\'submit\']")).click();',
           '      return driver.findElement(By.id("title")).sendKeys(dataMaster3.header);',
           '      return driver.findElement(By.id("description")).sendKeys(dataMaster3.description);',

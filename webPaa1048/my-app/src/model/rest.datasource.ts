@@ -194,4 +194,9 @@ constructor(private http: HttpClient, private route: Router){}
             window.location.reload()
         })
     }
+    runScript(data){        
+        this.http.post<any>(this.authPath + '/runscript', data).subscribe(res =>{ 
+            
+        })
+    }
 }

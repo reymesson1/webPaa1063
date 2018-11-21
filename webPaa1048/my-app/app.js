@@ -46,6 +46,17 @@ app.post('/removeschedules', scheduleController.removeschedule)
 app.get('/resetschedules', scheduleController.resetschedule)
 app.get('/resetscheduleswithvalue', scheduleController.resetschedulewithvalue)
 app.post('/resetnowschedules', scheduleController.resetnowschedule)
+app.post('/runscript',async(req,res)=>{
+  Master.find({},(err,master)=>{
+    master.map(m=>{      
+      m.header = m.header + " " + req.body.title
+      m.save(function(err,mast){
+        console.log('saved');
+      })
+    })    
+  })
+  res.send('Test')
+})
 mongoose.connect('mongodb://localhost:27017/project2',(err)=>{
   if(!err){
       console.log('Connected to mongo Database');
